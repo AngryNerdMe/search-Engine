@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+<style>
+
+.main-border{
+
+   position: relative;
+   top:120px; 
+   left:90px;
+   font-size: 16px;
+  
+   font-weight: 100;
+
+}
+ 
+
+ .input-con{
+
+    position: relative;
+    top:10px;
+    left: 50px;
+    padding: 4px;
+  
+
+    
+ }
+ .m-input{
+    position:relative;
+    width:500px;
+    height:30px;
+    border :2px solid coral;
+    border-radius:  30px;
+    left : 12px;
+    line-height: 40px;
+    font-family: "Gill Sans", sans-serif;
+    
+
+
+ }
+ a{
+
+    font-family: "Comic Sans MS", "Comic Sans", "cursive"
+ }
+
+ p{
+
+    font-family: "Gill Sans", sans-serif;
+   
+ }
+
+
+ span{
+
+    font-family: "Gill Sans", sans-serif;
+ }
+
+ h2{
+
+    font-family: "Gill Sans", sans-serif;
+ }
+
+</style>
+<body>
+
+    
+<div class ="input-con">
+    <input class = "m-input" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;{{query}}"></input>
+
+</div>
+<div class = "main-border">
+    {% for i in content %}
+    <a  class="link-decoration"href ='#'>{{filtered_links[loop.index0]}}</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="sub-decoration">{{filtered_page_numbers[loop.index0]}}</span>
+    <h2 class="sub-decoration">{{title[loop.index0]}} </h2>
+    <p class="main-decoration"> {{''.join(content[loop.index0])}}</p>
+    <br>
+    <hr color="coral">
+    {%  endfor %}
+</div>
+
+</body>
+</html>
